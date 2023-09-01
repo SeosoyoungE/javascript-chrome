@@ -1,11 +1,13 @@
-//parseInt에 숫자만 쓰여지지 않은 string값을 넣으면 NaN을 출력!
-//하지만 NaN을 typeof로 확인하면 number가 나옴
-
 const age = parseInt(prompt("How old are you?"));
 
-if(isNaN(age)){
-    console.log(age)
-    console.log("please write a number.")
-} else{
-    console.log("Thank you for writing your age.")
+if(isNaN(age) || age<0){
+    console.log("please write a real positive number.")
+} else if(age<18){
+    console.log("You are too young.")
+} else if(age>=18 && age<=50){
+    console.log("You can drink");
+} else if(age>50 && age<=80){
+    console.log("You should exercise");
+} else if(age>80){
+    console.log("You can do whatever you want.")
 }
