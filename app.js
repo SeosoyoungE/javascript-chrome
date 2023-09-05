@@ -1,3 +1,7 @@
-const title=document.querySelector("div h1");
+const title=document.querySelector(".hello:first-child h1");
 
-console.log(title)
+function handleTitleClick() {
+    title.style.color="green";
+}
+
+title.addEventListener("click", handleTitleClick)
