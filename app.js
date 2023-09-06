@@ -6,7 +6,7 @@ function handleTitleClick() {
     title.style.color="green";
 }
 
-title.addEventListener("click", handleTitleClick)
+title.onclick=handleTitleClick;
 title.addEventListener("mouseenter", function(){
     title.innerText="Mouse is here!"
 })
