@@ -1,14 +1,8 @@
-const h1=document.querySelector(".hello:first-child h1");
+const loginForm= document.querySelector("#login-form");
+const loginInput = loginForm.querySelector("input");
+const loginButton = loginForm.querySelector("button");
 
-function handleh1Click() {
-    h1.classList.toggle("clicked")
-    // 토글함수로 아래내용 한줄로
-    // const clickedClass = "clicked"
-    // if(h1.classList.contains(clickedClass)){
-    //     h1.classList.remove(clickedClass);
-    // } else{
-    //     h1.classList.add(clickedClass);
-    // }
+function loginBtnClick(){
+    console.log("hello ",loginInput.value)
 }
-
-h1.addEventListener("click", handleh1Click);
+loginButton.addEventListener("click",loginBtnClick)
