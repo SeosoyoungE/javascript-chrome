@@ -4,7 +4,7 @@ const toDolist = document.querySelector("#todo-list");
 
 const TODOS_KRY="todos"
 
-const toDos =[]
+let toDos =[]
 
 function saveToDos(){
     localStorage.setItem("todos",JSON.stringify(toDos));
@@ -42,5 +42,6 @@ const savedToDos = localStorage.getItem(TODOS_KRY);
 
 if(savedToDos){
     const parsedTodos=JSON.parse(savedToDos);
-    parsedTodos.forEach(item=>console.log(item));
+    toDos=parsedTodos;
+    parsedTodos.forEach(showToDo);
 }
