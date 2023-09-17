@@ -6,19 +6,18 @@ const TODOS_KRY="todos"
 
 let toDos =[]
 
-function filterToDo(todo){
-}
-
-function saveToDos(){
+function saveToDos(){ //localStorage에 변경사항을 저장
     localStorage.setItem("todos",JSON.stringify(toDos));
 }
 
-function deleteToDo(event){
+function deleteToDo(event){ //todolist삭제
     const li = event.target.parentElement;
     li.remove();
+    toDos=toDos.filter(toDo=> toDo.id!==parseInt(li.id));
+    saveToDos()
 }
 
-function makeToDo(newTodo){
+function makeToDo(newTodo){ //todolist html요소 만들기
     const li = document.createElement("li");
     li.id=newTodo.id;
     const span =document.createElement("span");
@@ -31,7 +30,7 @@ function makeToDo(newTodo){
     button.addEventListener("click",deleteToDo);
 }
 
-function toDoSubmit(event){
+function toDoSubmit(event){ //todo추가(submit)
     event.preventDefault();
     const newTodo= toDoInput.value;
     toDoInput.value="";
@@ -48,7 +47,7 @@ toDoFrom.addEventListener("submit",toDoSubmit);
 
 const savedToDos = localStorage.getItem(TODOS_KRY);
 
-if(savedToDos){
+if(savedToDos){//저장된 todo불러오기
     const parsedTodos=JSON.parse(savedToDos);
     toDos=parsedTodos;
     parsedTodos.forEach(makeToDo);
