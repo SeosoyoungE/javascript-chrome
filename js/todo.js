@@ -6,6 +6,9 @@ const TODOS_KRY="todos"
 
 let toDos =[]
 
+function filterToDo(todo){
+}
+
 function saveToDos(){
     localStorage.setItem("todos",JSON.stringify(toDos));
 }
