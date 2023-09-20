@@ -1,6 +1,39 @@
+@font-face{
+    font-family: 'GangwonState';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2307-2@1.0/GangwonState.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
 .hidden{
     display: none;
 }
+*{
+    font-family: 'GangwonState';
+}
 body{
-    background-color: bisque;
+    background-color: rgba(255, 127, 80, 0.753);
+    font-family: 'GangwonState';
+    font-weight:bold;
+    color: rgba(0, 0, 0, 0.774);
+}
+.bgImg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0.5;
+    image-rendering: -webkit-optimize-contrast;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+#clock{
+    position: absolute;
+    top:40%;
+    left: 50%;
+    transform:translate(-50%) translateY(-50%);
+    font-size: 80px;
+}
+#quote{
+    position: absolute;
+    bottom: 0;
 }
