@@ -1,19 +1,17 @@
-@font-face{
-    font-family: 'GangwonState';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2307-2@1.0/GangwonState.woff2') format('woff2');
-    font-weight: normal;
+@font-face {
+    font-family: 'Giants-Bold';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2307-1@1.1/Giants-Bold.woff2') format('woff2');
+    font-weight: 700;
     font-style: normal;
 }
 .hidden{
     display: none;
 }
 *{
-    font-family: 'GangwonState';
+    font-family: 'Giants-Bold';
 }
 body{
     background-color: rgba(255, 127, 80, 0.753);
-    font-family: 'GangwonState';
-    font-weight:bold;
     color: rgba(0, 0, 0, 0.774);
 }
 .bgImg {
@@ -22,6 +20,8 @@ body{
     left: 0;
     opacity: 0.5;
     image-rendering: -webkit-optimize-contrast;
+    transform:translateZ(0);
+    backface-visibility:hidden;
     width: 100%;
     height: 100%;
     z-index: -1;
