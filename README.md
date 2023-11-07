@@ -1,7 +1,7 @@
 <div align="left">
   
 # javascript로 크롬페이지 만들기
-페이지 주소: https://seosoyounge.github.io/javascript-chrome/
+페이지 주소: [https://seosoyounge.github.io/javascript-chrome/](https://seosoyounge.github.io/javascript_chrome/)
 
 ## 목차
 - [개요](#개요)
