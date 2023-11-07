@@ -15,7 +15,7 @@
 - 개발 인원: 1인
 
 ## 홈페이지 소개
-사진추가예정
+[블로그 포스팅](https://soyoung-e.tistory.com/7)
 
 ## 개발환경⚙
 <img  src="https://img.shields.io/badge/VScode-007ACC?style=for-the-badge&logo=visualstudiocode&logoColor=white">
