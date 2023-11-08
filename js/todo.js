@@ -58,4 +58,3 @@ if(savedToDos){//저장된 todo불러오기
     parsedTodos.forEach(makeToDo);
     toDolist.classList.remove("hidden");
 }
-
