@@ -54,6 +54,6 @@ if(savedToDos){//저장된 todo불러오기
     toDolist.classList.remove("hidden")
 }
 //아무내용 없을때 hidden
-if(localStorage.getItem("todos")){
+if(!localStorage.getItem("todos")){
     toDolist.classList.add("hidden")
 }
