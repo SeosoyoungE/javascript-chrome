@@ -8,7 +8,11 @@ let toDos =[]
 
 function saveToDos(){ //localStorage에 변경사항을 저장
     localStorage.setItem("todos",JSON.stringify(toDos));
-    
+    if(!localStorage.getItem("todos")){
+        toDolist.classList.add("hidden")
+    }else{
+        toDolist.classList.remove("hidden")
+    }
 }
 
 function deleteToDo(event){ //todolist삭제
