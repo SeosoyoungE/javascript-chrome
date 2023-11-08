@@ -47,6 +47,10 @@ toDoFrom.addEventListener("submit",toDoSubmit);
 
 const savedToDos = localStorage.getItem(TODOS_KRY);
 
+if(!localStorage.getItem("todos")){ //아무내용 없을때 hidden
+        toDolist.classList.add("hidden")
+}
+
 if(savedToDos){//저장된 todo불러오기
     const parsedTodos=JSON.parse(savedToDos);
     toDos=parsedTodos;
@@ -54,9 +58,3 @@ if(savedToDos){//저장된 todo불러오기
     toDolist.classList.remove("hidden")
 }
 
-//아무내용 없을때 hidden
-    if(!localStorage.getItem("todos")){
-        toDolist.classList.add("hidden")
-    }else{
-        toDolist.classList.remove("hidden")
-    }
