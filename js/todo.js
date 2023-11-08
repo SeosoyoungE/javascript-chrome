@@ -8,7 +8,11 @@ let toDos =[]
 
 function saveToDos(){ //localStorage에 변경사항을 저장
     localStorage.setItem("todos",JSON.stringify(toDos));
-    toDolist.classList.remove("hidden")
+    if(!localStorage.getItem("todos")){
+        toDolist.classList.add("hidden")
+    }else{
+        toDolist.classList.remove("hidden")
+    }
 }
 
 function deleteToDo(event){ //todolist삭제
@@ -48,13 +52,10 @@ toDoFrom.addEventListener("submit",toDoSubmit);
 
 const savedToDos = localStorage.getItem(TODOS_KRY);
 
-if(!localStorage.getItem("todos")){ //아무내용 없을때 hidden
-        toDolist.classList.add("hidden")
-}
-
 if(savedToDos){//저장된 todo불러오기
     const parsedTodos=JSON.parse(savedToDos);
     toDos=parsedTodos;
     parsedTodos.forEach(makeToDo);
+    toDolist.classList.remove("hidden");
 }
 
