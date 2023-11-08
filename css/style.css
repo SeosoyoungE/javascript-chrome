@@ -10,9 +10,6 @@
     font-weight: normal;
     font-style: normal;
 }
-.hidden{
-    display: none;
-}
 *{
     font-family: 'Giants-Bold';
 }
@@ -120,4 +117,7 @@ input::placeholder{
     border-radius: 1rem;
     border: 0;
     margin-top: 1rem;
+}
+.hidden{
+    display: none;
 }
