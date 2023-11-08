@@ -52,3 +52,9 @@ if(savedToDos){//저장된 todo불러오기
     toDos=parsedTodos;
     parsedTodos.forEach(makeToDo);
 }
+//아무내용 없을때 hidden
+if(localStorage.getItem("todos")){
+    toDolist.classList.contains("hidden")
+}else{
+    toDolist.classList.remove("hidden")
+}
