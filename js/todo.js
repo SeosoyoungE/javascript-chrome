@@ -8,6 +8,7 @@ let toDos =[]
 
 function saveToDos(){ //localStorage에 변경사항을 저장
     localStorage.setItem("todos",JSON.stringify(toDos));
+    toDolist.classList.remove("hidden")
 }
 
 function deleteToDo(event){ //todolist삭제
@@ -55,6 +56,5 @@ if(savedToDos){//저장된 todo불러오기
     const parsedTodos=JSON.parse(savedToDos);
     toDos=parsedTodos;
     parsedTodos.forEach(makeToDo);
-    toDolist.classList.remove("hidden")
 }
 
